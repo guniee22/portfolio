@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+.about-wrap{
+    width: 100%;
+}
+.profile{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.photo{
+    width: 300px; /* 이미지정해지면 바꿔 */
+}
+.photo img{
+    width: 100%;
+    /* height: 100%; 이미지 잘리면 적용하기 */ 
+}
+.pro-text{
+    margin: 20px 0;
+    width: 300px;
+}
+.pro-text p{
+    width: 100%;
+    margin: 10px 0;
+}
+.pro-text strong{
+    display: inline-block;
+    width: 100px;
+    
+}
+.stroy{
+    width: 90%;
+    margin: 10px auto;
+    padding: 20px 10px;
+}
+.stroy h3{
+    font-size: 20px;
+}
+.stroy p{
+    padding: 10px 0;
+}
+
+
+
+
+
+
+
+@media screen and (min-width:450px){
+    
+}
+
+@media screen and (min-width:650px){
+    
+}
+
+@media screen and (min-width:768px){
+    footer{
+        position: fixed;
+        bottom: 0;
+    }
+    .profile{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .stroy{
+        margin-top: 50px;
+    }
+    .stroy p{
+        line-height: 30px;
+    }
+    .about-wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    html,body,
+    .main,section{
+        height: 100%;
+    }
+}
+
+@media screen and (min-width:1000px){
+    
+}

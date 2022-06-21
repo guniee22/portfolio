@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+html,body{
+    font-size:1em;
+    font-family: "맑은 고딕";
+    margin: 0;
+    color:black;
+}
+a{
+    text-decoration: none;
+    color: #3333;
+}
+a:hover{
+    color: #6666;
+}
+img{
+    vertical-align: bottom;
+}
+table,td,th{
+    border:1px solid black;
+    border-collapse: collapse;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    width: 100%;
+}
+header{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.header-wrap{
+    width: 100%;
+    max-width: 1320px;
+    margin: auto;
+}
+h1{
+    text-align: center;
+    margin: 20px auto;
+    font-size: 22px;
+}
+nav{
+    width: 100%;
+    height: 50px;
+    background-color: gold;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+nav a{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(51, 51, 136);
+    width: 18%;
+}
+nav a.active{
+    position: relative;
+    color: red;
+}
+nav a.active::after{
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 2px;
+    background-color: red;
+    left: 15%;
+    bottom:-5px;
+}
+section{
+    width: 100%;
+    max-width: 1320px;
+    margin: auto;
+    padding-top: 120px;
+}
+h2{
+    color: darkred;
+    padding-left: 20px;
+    font-size: 20px;
+}
+footer{
+    height: 50px;
+    background-color: #6666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-wrap{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+}
+.modal-body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 40px 20px;
+}
+.modal-close{
+    position: absolute;
+    top:20px;
+    right:20px;
+    font-size: 1.2em;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.modal-con{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    overflow: auto;
+}
+.modal-con::-webkit-scrollbar{
+    display: none;
+}
+.modal-con img{
+    width: 100%;
+}
+
+
+@media screen and (min-width:450px){
+    
+}
+
+@media screen and (min-width:640px){
+    .modal-body{
+        width: 80%;
+        height: 80%;
+        min-height: 800px;
+        top: 10%;
+        left: 10%;
+        
+    }
+}
+
+@media screen and (min-width:768px){
+    
+}
+
+@media screen and (min-width:1000px){
+    
+}

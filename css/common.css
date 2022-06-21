@@ -1,0 +1,771 @@
+@charset "utf-8";
+/* @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap'); */
+@font-face {
+    font-family: test;
+    src: url(../font/NanumPenScript-Regular.woff);
+  }
+
+html,body{
+    font-size:1em;
+    font-family: "맑은 고딕";
+    margin: 0;
+    color:black;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+    color: #3333;
+}
+a:hover{
+    color:black;
+}
+img{
+    vertical-align: bottom;
+}
+table,td,th{
+    border:1px solid black;
+    border-collapse: collapse;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Nanum Pen Script', cursive; */
+}
+.main{
+    width: 100%;
+    max-width:1920px;
+    margin: auto;
+    height: 100%;
+}
+
+header{
+    position: fixed;
+    /* border-bottom: 1px solid black; */
+    width: 100%;
+    height: 100px;
+    left: 0;
+    z-index: 999999;
+    background-color:white;
+}
+.header-wrap{
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    min-width: 1360px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+/* h1{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin-left: 20px;
+    margin-top: 25px;
+    background-color: crimson;
+    font-family: test;
+} */
+.logo{
+    width: 15%;
+    height: 70px;
+    margin-left: 20px;
+    /* border: 1px solid black; */
+    /* padding:100px 50px 100px 50px; */
+    overflow: hidden;
+    position: relative;
+}
+.logo a > img{
+    position: absolute;
+    width:100%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+nav{
+    width: 73%;
+    background-color: white;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 20px;
+}
+nav a{
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: test;
+    color: black;
+    font-size: 1.2vw;
+}
+nav a:after{
+    content:"";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    bottom: 15px;
+    background-color: #F15252;
+    transform: scale(0);
+    transition: 0.3s;
+}
+nav a.active:after{
+    transform: scale(1);
+}
+
+/* 너비 싹다 조정해@!!!!!!!!!!!!!!!!!!!!*/
+
+.section-wrap{
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    margin: auto;
+}
+section{
+    width: 100%;
+    height: 100%;
+    /* border-bottom: 1px dashed black; */
+    padding-top: 80px;
+   
+}
+h2{
+    margin-top: 20px;
+    color: #F15252;
+    font-family: test;
+    font-size: 1.5vw;
+    margin-left: 50px;
+}
+
+.ppo-wrap{
+    width: 100%;
+    max-width: 1320px;
+    height: 80%;
+    margin: auto;
+    margin-top: 100px;
+    /* border: 1px solid black; */
+
+}
+.port{
+    width: 40%;
+    /* border: 1px solid black; */
+    position: relative;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.port img{
+    position: absolute;
+    width:100%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+
+.about-wrap{
+    width: 60%;
+    height: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+.about-img{
+    width: 45%;
+    margin: auto;
+}
+.imgimg{
+    width: 60%;
+    border-radius: 50%;
+    margin: auto;
+    border: 1px solid black;
+    overflow:hidden;
+}
+.about-img img{
+    width: 100%;
+}
+.about-text{
+    width: 30%;
+    height: auto;
+    /* border: 1px solid black; */
+    margin: auto;
+    /* text-align: center; */
+    height: 300px;
+
+}
+.about-con{
+    width: 50%;
+    height: auto;
+    /* border: 1px solid black; */
+    margin: auto;
+    text-align: center;
+    height: 300px;
+}
+.about-text p{
+    margin: 10px 0;
+    font-size: 20px;
+}
+.about-text strong{
+    display: inline-block;
+    /* width: 80px; */
+}
+.about-con p{
+    margin: 10px 0;
+    font-size: 20px;
+    line-height: 30px;
+}
+.about-con strong{
+    display: inline-block;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+/* 원형 프로그래스 바 css 플러그인 복붙한거 */
+
+.progress-wrap{
+    margin: auto;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    /* border: 1px solid black; */
+}
+
+.progress{
+    width: 300px;
+    display: inline-block;
+    margin: auto;
+}
+.bar{
+    width: 300px;
+    background-color: #eee;
+    height: 30px;
+    position: relative;
+}
+.bar:after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: #B8E952;
+    transition: 0.5s;
+}
+.bar.photo.active:after{
+    width: 60%;
+}
+.bar.ill.active:after{
+    width: 60%;
+}
+.bar.html.active:after{
+    width: 70%;
+}
+
+.progress strong, .progress span{
+    display: block;
+    text-align: center;
+}
+
+
+.modal-wrap{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    background-color: rgba(0,0,0,0.7);
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    display: none;
+}
+.modal-body{
+    width: 60%;
+    height: 80%;
+    background-color: white;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-close{
+    position: absolute;
+    top:20px;
+    right:20px;
+    font-size: 1.5em;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.modal-con{
+    position: relative;
+    width: 90%;
+    height: 90%;
+
+    overflow: auto;
+}
+.modal-con::-webkit-scrollbar{
+    display: none;
+}
+.modal-con img{
+    width: 100%;
+}
+.link-view{
+    display: inline-block;
+    position: absolute;
+    top:10%;
+    left: 25%;
+    width: 50%;
+    height: 50px;
+    background-color:#F15252;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    animation-name: link-op;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+@keyframes link-op{
+    100%{
+        opacity: 0;
+    }
+}
+
+
+
+.web-thum-wrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.web-thum{
+    width: 30%;
+    height: 85%;
+    margin:0 20px ;
+    cursor: pointer;
+}
+.web-img{
+    width: 100%;
+    height: 70%;
+}
+.web-img img{
+    width: 100%;
+    height: auto;
+}
+.flower>img{
+    height: 300px;
+}
+.web-text{
+    padding: 10px;
+    font-size: 0.8vw;
+}
+
+.web-logo{
+    width: 30%;
+    margin: auto;
+    margin-top: 20px;
+}
+.web-logo img{
+    width: 100%;
+}
+.cafe{
+    width: 15%;
+
+}
+
+.web-thum strong{
+    display: inline-block;
+    width: 150px;
+    margin-top: 15px;
+}
+.color{
+    display: inline-block;
+    width:30px;
+    height: 30px;
+    text-indent: -9999px;
+    background-color: green;  
+}
+.green{
+    background-color: green;
+}
+.d-green{
+    background-color: darkgreen;
+}
+.web-link{
+    display: block;
+    width: 200px;
+    height: 40px;
+    background-color: #B8E952;
+    color: white;
+    margin:20px auto;
+    text-align: center;
+    border-radius: 50px;
+    padding: 10px;
+}
+.modal-section{
+    display: none;
+}
+.black{
+    background-color: black;
+}
+.yellow{
+    background-color: yellow;
+}
+.mint{
+    background-color:mediumaquamarine;
+}
+.pink{
+    background-color: pink;
+}
+
+.web-thum{
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 0.5s;
+}
+.web-thum-ani1{
+    transition-delay: 0s;
+    opacity: 1;
+    transform: translateX(0);
+}
+.web-thum-ani2{
+    transition-delay: 0.3s;
+    opacity: 1;
+    transform: translateX(0);
+}
+.web-thum-ani3{
+    transition-delay: 0.7s;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+h3{
+    margin-left:100px;
+    margin-top: 50px;
+}
+
+
+/* 배너수 정해지면 수정해야함 */
+.banner-wrap{
+    width: 100%;
+
+    margin: auto;
+    margin-top: 50px;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+.banner{
+    width: 30%; /* 배너수 정해지면 바꿔넣어 */
+    margin-left:30px;
+    margin-bottom:15px;
+    opacity: 0;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.banner-img img{
+    width: 100%;
+    height: 300px;
+}
+.banner strong{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8vw;
+    margin-top: 10px;
+    padding: 10px;
+}
+.banner-ani1{
+    transition-delay: 0.3s;
+    opacity: 1;
+}
+.banner-ani2{
+    transition-delay: 0.9s;
+    opacity: 1;
+}
+.banner-ani3{
+    transition-delay: 1.4s;
+    opacity: 1;
+}
+.banner-ani4{
+    transition-delay: 0.6s;
+    opacity: 1;
+    
+}
+.banner-ani5{
+    transition-delay: 1.1s;
+    opacity: 1;
+}
+.banner-ani6{
+    transition-delay: 1.6s;
+    opacity: 1;
+}
+/* detail 이미지 수 정하고 잘라서 수정해야함 */
+.detail-wrap{
+    width: 90%; 
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+    margin: auto;
+
+    margin-top: 100px;
+}
+.detail{
+    width: 30%;
+    height: auto;
+    cursor: pointer;
+}
+.detail-img{
+    width: 100%;
+    height: 620px;
+    overflow: hidden;
+
+}
+.detail-img img{
+    width: 100%;
+}
+.detail strong{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.8vw;
+}
+
+
+
+@media screen and (max-width:1024px){
+
+    .logo{
+        width: 20%;
+    }
+    nav{
+        width: 80%;
+    }
+    nav a{
+        width: 25%;
+        font-size: 2vw;
+    }
+    h2{
+        font-size: 3.5vw;
+    }
+    .about-wrap{
+        width: 85%;
+        height: 90%;
+        margin-top: 30px;
+    }
+    .about-text strong{
+        font-size: 2.5vw;
+    }
+    .about-con strong{
+        font-size: 2.5vw;
+    }
+    .about-con p{
+        font-size: 2.2vw;
+    }
+    .progress strong,
+    .progress span{
+        font-size: 2vw;
+    }
+    .web-thum{
+        height: 95%;
+    }
+    .web-img{
+        height: 60%;
+    }
+    .flower>img{
+        height: 220px;
+    }
+    .web-text strong,
+    .web-text span{
+        font-size: 2vw;
+    }
+    .color{
+        margin-right: 10px;
+    }
+    .detail-img{
+        height: 70%;
+    }
+    .detail strong{
+        font-size: 2vw;
+    }
+    .banner strong{
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width:800px){
+    .logo{
+        width: 25%;
+    }
+    nav{
+        width: 70%;
+    }
+    nav a{
+        width: 25%;
+        font-size: 3.5vw;
+    }
+    h2{
+        font-size: 4.5vw;
+    }
+    .about-wrap{
+        width: 90%;
+    }
+    .about-text strong{
+        font-size: 3.5vw;
+    }
+    .about-con strong{
+        font-size: 3.5vw;
+    }
+    .about-con p{
+        font-size: 3vw;
+    }
+    .progress strong,
+    .progress span{
+        font-size: 2.5vw;
+    }
+    .web-thum{
+        height: 98%;
+    }
+    .web-logo{
+        margin-top: 40px;
+    }
+    .web-text strong,
+    .web-text span{
+        font-size: 3vw;
+    }
+    .web-link{
+        width: 250px;
+        height: 50px;
+        font-size: 2.5vw;
+    }
+    .detail strong{
+        font-size: 3vw;
+    }
+    .banner{
+        width: 40%;
+        margin-left: 6%;
+    }
+    .banner strong{
+        font-size: 3vw;
+    }
+}
+@media screen and (max-width:640px){
+
+    nav a{
+        font-size: 4.5vw;
+    }
+    h2{
+        font-size: 5.5vw;
+    }
+    .about-wrap{
+        width: 98%;
+    }
+    .about-text strong{
+        font-size: 4.5vw;
+    }
+    .about-con strong{
+        font-size: 4.5vw;
+    }
+    .about-con p{
+        font-size: 4vw;
+    }
+    .progress strong,
+    .progress span{
+        font-size: 3.5vw;
+    }
+    .web-text strong,
+    .web-text span{
+        font-size: 4vw;
+    }
+    .web-link{
+        width: 250px;
+        height: 50px;
+        font-size: 3.5vw;
+    }
+    .detail strong{
+        font-size: 4vw;
+    }
+    .banner{
+        width: 40%;
+        margin-left: 6%;
+    }
+    .banner strong{
+        font-size: 4vw;
+    }
+}
+@media screen and (max-width:450px){
+
+    .logo{
+        width: 25%;
+    }
+    nav{
+        width: 70%;
+    }
+    nav a{
+        width: 25%;
+        font-size: 5.5vw;
+    }
+    h2{
+        font-size: 6.5vw;
+    }
+    .about-wrap{
+        width: 90%;
+    }
+    .about-text strong{
+        font-size: 5vw;
+    }
+    .about-con strong{
+        font-size: 5.5vw;
+    }
+    .about-con p{
+        font-size: 5vw;
+    }
+    .progress strong,
+    .progress span{
+        font-size: 4.5vw;
+    }
+
+    .web-text strong,
+    .web-text span{
+        font-size: 5vw;
+    }
+    .web-link{
+        width: 250px;
+        height: 50px;
+        font-size: 4.5vw;
+    }
+    .detail strong{
+        font-size: 5vw;
+    }
+    .banner{
+        width: 40%;
+        margin-left: 6%;
+    }
+    .banner strong{
+        font-size: 5vw;
+    }
+}
